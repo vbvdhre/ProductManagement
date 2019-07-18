@@ -1,11 +1,10 @@
 const config = {
   "development": {
-    "username": "productsadmin",
-    "password": "SecretProducts",
-    "database": "myowndbuser",
-    "host": "productsdb.czgimqsovwuc.ap-south-1.rds.amazonaws.com",
-    "dialect": "postgres",
-    "operatorsAliases": false
+    "username": "postgres",
+    "password": "postgres",
+    "database": "postgres",
+    "host": "localhost",
+    "dialect": "postgres"
   },
   "test": {
     "username": "root",
