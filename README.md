@@ -13,24 +13,24 @@ To access Production environment you can use 'http://13.232.50.44:3000' url.\n
 So the `Domain_url` will be 'http://localhost:3000' for develepoment and 'http://13.232.50.44:3000' for production.
 
 ## Api-
-1. Delete Category and associate path-
-1. Path
+` Delete Category and associate path`-
+1. Path-
 Domain_url + "/api/category/:id"
-2. Method
+2. Method-
 delete
-3. Requested params
+3. Requested params-
 category id you want to delete in place of ":id" in api url.
-4. Output
+4. Output-
 "Category Deleted Successfully."
 
-2. List all the categories along with the number of products associated with it-
-1. Path
+`List all the categories along with the number of products associated with it`-
+1. Path-
 Domain_url + "/api/categories"
-2. Method
+2. Method-
 get
-3. Requested params
+3. Requested params-
 No params required
-4. Output
+4. Output-
 Output is array of object,each object containg individual category id, name and its products count.\n
 for Ex:-\n
 [
