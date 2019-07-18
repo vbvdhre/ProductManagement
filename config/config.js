@@ -17,11 +17,10 @@ const config = {
   },
   "production": {
     "username": process.env.username,
-    "password": process.env.pssword,
+    "password": process.env.password,
     "database": process.env.database,
     "host": process.env.host,
-    "dialect": "postgres",
-    "operatorsAliases": false
+    "dialect": "postgres"
   }
 };
 module.exports = config;
