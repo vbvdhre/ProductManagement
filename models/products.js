@@ -5,7 +5,6 @@ module.exports = (sequelize, DataTypes) => {
     categoryid: DataTypes.NUMBER
   }, {});
   products.associate = function(models) {
-    // associations can be defined here
     models.products.belongsTo(models.category, {
       foreignKey : 'categoryid',
       targetKey : 'id'
