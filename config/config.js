@@ -1,4 +1,4 @@
-{
+const config = {
   "development": {
     "username": "productsadmin",
     "password": "SecretProducts",
@@ -12,15 +12,16 @@
     "password": null,
     "database": "database_test",
     "host": "127.0.0.1",
-    "dialect": "mysql",
+    "dialect": "postgres",
     "operatorsAliases": false
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql",
+    "username": process.env.username,
+    "password": process.env.pssword,
+    "database": process.env.database,
+    "host": process.env.host,
+    "dialect": "postgres",
     "operatorsAliases": false
   }
-}
+};
+module.exports = config;

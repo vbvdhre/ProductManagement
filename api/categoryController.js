@@ -46,28 +46,17 @@ const deleteCategory = (req, res) => {
           return res.send('Category Deleted Successfully.');
         })
         .catch((err) => {
-          console.log('err', err);
+          return res.status(500).json({
+            Error : err
+          });
         })
       } else {
-        return res.send(`No Category found with the id ${Number(req.params.id)}`);
+        return res.send(`No Category found for the id ${Number(req.params.id)}`);
       }
     }).catch((err) => {
       console.log('err', err);
     })
-  })
-  // const Schema = Joi.object().keys({
-  //   id : Joi.number().required()
-  // })
-  // return Joi.validate(req.params, (error, response) => {
-  //   console.log('error=---', error);
-  //   if (error) {
-  //     console.log('Validation Error', error);
-  //     return res.status(422).json({
-  //       Error : err
-  //     });
-  //   }
-  //   console.log('response=---', response);
-  // })
+  });
 };
 module.exports = {
   getAllCategories : getAllCategories,
